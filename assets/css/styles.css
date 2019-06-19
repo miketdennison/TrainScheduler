@@ -1,0 +1,27 @@
+body {
+    font-family: 'Montserrat',
+        sans-serif;
+}
+
+.table th {
+    border-top: 0;
+    margin: 0;
+    padding: 0rem;
+    vertical-align: top;
+}
+
+.bg-blue {
+    background-color: #20315A;
+}
+
+.border-blue {
+    border-color: #20315A;
+}
+
+label {
+    font-weight: bold;
+}
+
+#submit-button {
+    font-weight: bold;
+}

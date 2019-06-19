@@ -6,27 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Train Scheduler</title>
-
+    
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/cd37de2b15.js"></script>
+    <!--Custom Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <!--Custom CSS file-->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body>
+<body class="bg-light">
+    <header>
+        <div class="jumbotron jumbotron-fluid bg-blue mb-5">
+            <div class="container">
+                <h1 class="display-4 text-center text-light">Anytime is Train Time</h1>
+                <p class="lead text-center text-light">Choo Choo. Chee Chee.</p>
+            </div>
+        </div>
+    </header>
+
+    <!--Train Data-->
+    <div class="container">
+        <div class="card border-blue bg-white">
+            <h5 class="card-header bg-blue text-light"><i class="far fa-clock mr-2"></i>Train Shedule</h5>
+            <div class="card-body">
+                <table class="table">
+                    <thead class="thead-white">
+                        <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--Dynamically add tr and td-->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!--Add Data-->
+    <div class="container my-5">
+        <div class="card border-blue bg-white">
+            <h5 class="card-header bg-blue text-white"><i class="fas fa-train mr-2 text-light"></i> Add Train</h5>
+            <div class="card-body">
+                <form role="form">
+                    <div class="form-group">
+                        <label for="add-train-name">Train Name</label>
+                        <input type="text" class="form-control" id="add-train-name">
+                    </div>
+                    <div class="form-group">
+                    </div>
+                    <div class="form-group">
+                        <label for="add-destination-name">Destination</label>
+                        <input type="text" class="form-control" id="add-destination-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="add-first-train-time">First Train Time (HH:mm- military time)</label>
+                        <input type="text" class="form-control" id="add-first-train-time"">
+                    </div>
+                    <div class="form-group">
+                        <label for="add-frequency-time">Frequency (min) </label>
+                        <input type="text" class="form-control" id="add-frequency-time">
+                    </div>
+                    <button type="button" class="btn bg-blue text-light" id="submit-button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!--Firebase-->
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <!--jQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.9.0/d3.min.js"></script>
     <!--Bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+    <!--Custom JS Fo;e-->
+    <script src="assets/javascript/index.js"></script>
 </body>
 
 </html>

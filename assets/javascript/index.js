@@ -14,4 +14,3 @@ firebase.initializeApp(firebaseConfig);
 
 // Reference to Firebase database
 var database = firebase.database();
-
