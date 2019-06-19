@@ -3,7 +3,7 @@
 Train Schedule pulls information from firebase to dynamically update train times for users.
 
 ## Getting Started
-Click the live link below.
+Click the live link below:  
 Live Link: N/A
 
 ## Built With
