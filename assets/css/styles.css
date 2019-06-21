@@ -1,3 +1,15 @@
+.jumbotron {
+  background-image: url("../images/jumbo-image.jpg");
+  background-size: cover;
+
+}
+
+.display-6 {
+    font-family: 'Montserrat',
+    sans-serif;
+    font-weight: 900;
+}
+
 body {
     font-family: 'Montserrat',
         sans-serif;
