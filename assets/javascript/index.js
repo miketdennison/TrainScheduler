@@ -54,7 +54,7 @@ function updateView(snapshot) {
 
     // Next Train
     var nextTrain = moment().add(tMinutesTillTrain, "minutes");
-    var arrivalTime = moment(nextTrain).format("hh:mm");
+    var arrivalTime = moment(nextTrain).format("HH:mm");
 
     // Update Rows
     var row =
@@ -79,7 +79,17 @@ function updateDb() {
     dbRef.push({
         trainName: $("#add-train-name").val().trim(),
         trainDst: $("#add-destination-name").val().trim(),
-        trainFreq: $("#add-frequency-time").val().trim(), 
+        trainFreq: $("#add-frequency-time").val().trim(),
         firstTrain: $("#add-first-train-time").val().trim(),
     });
 }
+
+// Set current time before initiating timer
+var now = moment().format("HH:mm:ss a");
+$("#current-time").text(now);
+
+// Increment time every second
+setInterval(function() {
+    now = moment().format("HH:mm:ss a");
+    $("#current-time").text(now);
+}, 1000);
